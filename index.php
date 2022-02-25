@@ -1,6 +1,7 @@
 <?php
+//INCLUDE DO ARQUIVO DE CONEXÃO
 include 'funcoes/conn.php';
-
+//PAGINA PRINCIPAL ONDE O USUÁRIO FARÁ O CADASTRO DO PRODUTO
 
 ?>
 
@@ -23,7 +24,7 @@ include 'funcoes/conn.php';
             <li><a href="tabela.php">VISUALIZAR PRODUTOS CADASTRADOS</a></li>
         </ul>
     </nav>
-
+    <!-- FORMULÁRIO ONDE RECEBERÁ OS PARAMETROS DE CADASTRO -->
     <form action="funcoes/cadastro.php" method="post">
         <div>
             <label for="name">Produto:</label>

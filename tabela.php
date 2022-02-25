@@ -1,6 +1,7 @@
 <?php
 include 'funcoes/conn.php';
 
+//CONSULTA DOS NOSSOS PRODUTOS CADASTRADOS
 $query = 'SELECT * FROM produtos ORDER BY id_prod DESC;';
 $query = $pdo->prepare($query);
 $query->execute();
@@ -44,6 +45,7 @@ $row_result = $query->fetchAll();
         <tbody>
             <tr>
                 <?php
+                //LAÇO QUE GERA OS PRODUTOS EM UM LOOP
                 foreach ($row_result as $array) {
                     $id_prod = $array['id_prod'];
                     $produto = $array['nome'];
@@ -51,6 +53,7 @@ $row_result = $query->fetchAll();
                     $cor = $array['cor'];
                     $desconto = '0';
 
+                    // REGRAS DE NEGÓCIO DE ACORDO COM A AVALIAÇÃO
                     switch ($cor) {
 
                         case 'Vermelho':
@@ -70,6 +73,7 @@ $row_result = $query->fetchAll();
                         $desconto = $preco * 0.05;
                     }
                 ?>
+                <!--LAÇO FOREACH TRAZENDO OS PARAMETROS EM ARRAY JUNTAMENTE COM A FORMATAÇÃO DOS NÚMEROS-->
                     <td data-label="Produto"><?= $produto ?></td>
                     <td data-label="Cor"><?= $cor ?></td>
                     <td data-label="Preço">R$ <?= number_format($preco, 2, ',', '.'); ?></td>

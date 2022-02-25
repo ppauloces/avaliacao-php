@@ -1,8 +1,10 @@
 <?php
 include 'conn.php';
 
+//PEGANDO OS DADOS VIA GET PARA A EDIÇÃO
 $id = $_GET['id'];
 
+//CONSULTA DOS DADOS CADASTRADOS
 $query = 'SELECT * FROM produtos WHERE id_prod = :id';
 $query = $pdo->prepare($query);
 $query->bindValue(':id',$id);
@@ -32,6 +34,7 @@ $row_result = $query->fetchAll();
     </nav>
 
     <?php
+    //LACO PARA VISUALIZAÇÃO DO PRODUTO DE ACORDO COM O ID
         foreach ($row_result as $array) {
           $id_prod = $array['id_prod'];
           $produto = $array['nome'];

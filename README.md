@@ -14,9 +14,9 @@ PHP & HTML
 1)	Crie uma página com dois campos PRODUTOS, PREÇOS, COR.
 2)	Crie botões de INSERÇÃO, ATUALIZAÇÃO e de EXCLUSÃO.
 3)	Monte uma tabela (HTML) para Listar os Produtos.
-4)	Bônus: Crie um Filtro Básico para a página.
-a)	Filtrar por Nome
-b)	Filtrar por Cor. Em um campo de SELECT.
+4)	Bônus: Crie um Filtro Básico para a página.<br>
+a)	Filtrar por Nome<br>
+b)	Filtrar por Cor. Em um campo de SELECT.<br>
 c)	Filtrar por preço. Quando for MAIOR, MENOR OU IGUAL.
 
 
